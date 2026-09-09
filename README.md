@@ -8,7 +8,6 @@ Y \approx E A B
 
 本目录是从完整分析工程中整理出的 **GitHub 发布包**，只包含模型代码、关键脚本与数据集说明，不含大型矩阵 / fragments / checkpoint。
 
-> 完整实验与论文审计材料仍在上级目录 `12.atac_impute/`（及 `paper_audit_20260908_server/`）。上传 GitHub 时请以本文件夹为仓库根目录。
 
 ---
 
