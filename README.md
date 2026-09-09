@@ -1,10 +1,7 @@
 # ChromBERT-scAI
 
-稀疏 scATAC-seq 可及性矩阵插补：用固定的 ChromBERT 区域表征 \(E\) 约束低秩重建
-
-\[
-Y \approx E A B
-\]
+稀疏 scATAC-seq 可及性矩阵插补：用固定的 ChromBERT 区域表征 E 约束低秩重建
+Y = EAB
 <img width="1600" height="900" alt="image" src="https://github.com/llzzhh0512/ChromBERT-scAI/blob/main/docs/model.svg" />
 
 本目录是从完整分析工程中整理出的 **GitHub 发布包**，只包含模型代码、关键脚本与数据集说明，不含大型矩阵 / fragments / checkpoint。
@@ -95,9 +92,9 @@ bash scripts/run_impute.sh
 | 字段 | 含义 |
 |------|------|
 | `adata.X` | 插补后的相对可及性分数（float16；**可为负**） |
-| `adata.obsm['latent']` | 细胞表征 \(B^\top\) |
-| `adata.varm['topic']` | 区域表征 \(EA\) |
-| `adata.uns['ALS_A']` | 因子 \(A\) |
+| `adata.obsm['latent']` | 细胞表征 $\(B^\top\)$ |
+| `adata.varm['topic']` | 区域表征 EA |
+| `adata.uns['ALS_A']` | 因子 A |
 
 对未见峰外推：`E_test @ ALS_A @ latent.T`。
 
@@ -105,11 +102,7 @@ bash scripts/run_impute.sh
 
 ## 引用与先验来源
 
-- 本方法：ChromBERT-scAI（固定 \(E\) + ALS 低秩重建）
-- 区域表征来自 ChromBERT 预训练产物；**请勿在未核对 checkpoint 前称为纯 DNA sequence language model**（已发表 ChromBERT 主要基于调控因子 ChIP-seq 共关联预训练）
+- 本方法：ChromBERT-scAI（固定 E + ALS 低秩重建）
+- 区域表征来自 ChromBERT 预训练产物（已发表 ChromBERT 主要基于调控因子 ChIP-seq 共关联预训练）
 
 ---
-
-## 许可
-
-代码按你仓库选定的开源协议发布。数据集请遵循各自原始数据许可与引用要求（见 `docs/datasets.md`）。
