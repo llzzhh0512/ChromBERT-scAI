@@ -5,7 +5,7 @@
 \[
 Y \approx E A B
 \]
-<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/e92fd101-7e8c-4ccb-b727-94deac5b2c2d" />
+<img width="1600" height="900" alt="image" src="https://github.com/llzzhh0512/ChromBERT-scAI/blob/main/docs/model.svg" />
 
 本目录是从完整分析工程中整理出的 **GitHub 发布包**，只包含模型代码、关键脚本与数据集说明，不含大型矩阵 / fragments / checkpoint。
 
