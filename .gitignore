@@ -1,0 +1,33 @@
+# large data / local paths
+data/
+output/
+*.h5ad
+*.h5mu
+*.npy
+*.npz
+*.bam
+*.fastq
+*.fq.gz
+fragments*.tsv*
+*.zarr/
+!docs/embedding_zarr_meta/
+
+# keep ChromBERT bin BEDs tracked; ignore other large annotation dumps
+annotations/*
+!annotations/README.md
+!annotations/hg38_6k_1kb_region.bed
+!annotations/mm10_5k_1kb_region.bed
+
+# python / OS
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+.env
+.venv/
+wandb/
+*.log
+
+# IDE
+.idea/
+.vscode/

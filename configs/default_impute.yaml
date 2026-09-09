@@ -1,0 +1,17 @@
+# Example hyperparameters used in most downstream benchmarks
+input: data/example.h5ad
+output: output/example_imputed_ALS.h5ad
+emb_dir: /path/to/atac_embs_dim.zarr   # hg38; use atac_embs_dim_mm10.zarr for mouse
+emb_dim: 768        # 768 = full; or 32/50/100 for PCA arrays inside zarr
+topics: 128         # K, rank of A B
+lambdaA: 1.0
+lambdaB: 0.1
+als_iters: 20
+cg_iters: 500
+cg_tol: 1.0e-5
+binary: true
+seed: 42
+
+# Peak → ChromBERT bin BED (shipped under annotations/)
+bins_hg38: annotations/hg38_6k_1kb_region.bed
+bins_mm10: annotations/mm10_5k_1kb_region.bed
